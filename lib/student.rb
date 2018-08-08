@@ -33,7 +33,13 @@ class Student
 
   def self.students_below_12th_grade
     sql = "SELECT name FROM students where grade != ?"
-    DB[:conn].execute(sql,12).flatten
+    array_of_names = DB[:conn].execute(sql,12).flatten
+    array_of_names.each do |nme|
+      Student.new.name = nme
+      end
+    
+    end
+    
   end
 
   def save
