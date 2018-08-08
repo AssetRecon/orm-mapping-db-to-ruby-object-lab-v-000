@@ -26,7 +26,7 @@ class Student
 
     row = DB[:conn].execute(sql,name)
 
-    Student.new_from_db(row)
+    self.new_from_db(row)
 
   end
 
