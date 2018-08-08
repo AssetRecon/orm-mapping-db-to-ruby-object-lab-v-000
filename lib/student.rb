@@ -38,7 +38,8 @@ class Student
 #      Student.new_from_db(row)
 #      end
       row = DB[:conn].execute(sql,12)
-      Student.new_from_db(row)
+      array = Student.new_from_db(row)
+      array
     end
 
   def save
