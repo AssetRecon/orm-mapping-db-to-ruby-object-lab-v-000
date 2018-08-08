@@ -37,9 +37,8 @@ class Student
 #    array_of_rows.each do |row|
 #      Student.new_from_db(row)
 #      end
-      row = DB[:conn].execute(sql,12)
-      array = Student.new_from_db(row)
-      array
+      DB[:conn].execute(sql,12).flatten
+    
     end
 
   def save
