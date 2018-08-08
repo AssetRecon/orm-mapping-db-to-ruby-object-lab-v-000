@@ -35,7 +35,7 @@ class Student
     sql = "SELECT name FROM students where grade != ?"
 
     array_of_names = DB[:conn].execute(sql,12).flatten
-    sam = array_of_names.first
+    sam = array_of_names[0]
     Student.new.name = sam
 
 
