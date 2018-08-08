@@ -29,7 +29,7 @@ class Student
   def self.count_all_students_in_grade_9
     sql = "SELECT name FROM students where grade = ?"
 
-  DB[:conn].execute(sql,"9th").flatten
+  DB[:conn].execute(sql,9).flatten
   end
 
   def save
