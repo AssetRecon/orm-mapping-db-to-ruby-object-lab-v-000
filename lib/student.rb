@@ -37,10 +37,7 @@ class Student
     array_of_rows.each do |row|
       Student.new_from_db(row)
       end
-
     end
-
-  end
 
   def save
     sql = <<-SQL
