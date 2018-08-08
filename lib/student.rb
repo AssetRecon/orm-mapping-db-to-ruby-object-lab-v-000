@@ -37,9 +37,9 @@ class Student
     array_of_names.each do |nme|
       Student.new.name = nme
       end
-    
+
     end
-    
+
   end
 
   def save
