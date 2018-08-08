@@ -11,6 +11,7 @@ class Student
     student.id = id
     student.name = name
     student.grade = grade
+    student
   end
 
   def self.all
