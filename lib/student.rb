@@ -33,7 +33,7 @@ class Student
 
   def self.students_below_12th_grade
     sql = "SELECT * FROM students where grade != ?"
-    array_of_rows = DB[:conn].execute(sql,12).flatten
+    array_of_rows = DB[:conn].execute(sql,12)
     array_of_rows.each do |row|
       Student.new_from_db(row)
       end
