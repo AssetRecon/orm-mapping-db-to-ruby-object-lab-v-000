@@ -27,7 +27,7 @@ class Student
   end
 
   def self.count_all_students_in_grade_9
-    sql = "SELECT * from students where grade = ?"
+    sql = "SELECT name FROM students where grade = ?"
 
   array =  DB[:conn].execute(sql,"9th").flatten
   array.length
