@@ -82,5 +82,10 @@ class Student
     self.new_from_db(DB[:conn].execute(sql).flatten)
   end
 
+  def self.all_students_in_grade_X(x)
+    sql = "SELECT * FROM students WHERE grade = ?"
+    DB[:conn].execute(sql,x)
+  end
+
 
 end
