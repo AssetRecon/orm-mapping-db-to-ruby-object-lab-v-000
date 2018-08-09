@@ -34,9 +34,9 @@ class Student
   def self.students_below_12th_grade
     sql = "SELECT name FROM students where grade != ?"
 
-    array_of_names = DB[:conn].execute(sql,12).flatten
-    sam = array_of_names[0]
-    Student.new.name = sam
+    DB[:conn].execute(sql).map do |row|
+    self.new_from_db(row)
+   end
 
 
     end
